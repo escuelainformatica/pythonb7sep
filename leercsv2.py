@@ -2,6 +2,12 @@ import csv
 
 listado = [] # creamos un listado vacio
 
+"""
+Use * for multiplication of a number
+The * is a multiplication operator in Python
+To print the value, use the print() function
+"""
+
 with open('news_decline.csv') as csv_file:
     lector = csv.reader(csv_file, delimiter=",")
     encabezado = next(lector)  # leer el encabezado
@@ -14,4 +20,4 @@ with open('news_decline.csv') as csv_file:
             "2011": float(linea[3].strip())}
         listado.append(dic)  # y agregar el diccionario a la lista
 
-print(listado[1:])  # quito la primera fila.
+print(listado)  # quito la primera fila.
