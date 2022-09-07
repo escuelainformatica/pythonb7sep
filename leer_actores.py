@@ -17,6 +17,8 @@ print(listado)
 
 with open('actor_final.csv','w') as csv_file2:
     escritura=csv.writer(csv_file2,delimiter=",",lineterminator='\n')
+    escritura.writerow(["actor_id","first_name","last_name","last_update"])
+
     for fila in listado:
         print(fila)
         escritura.writerow([
